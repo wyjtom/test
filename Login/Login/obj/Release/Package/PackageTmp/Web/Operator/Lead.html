@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav {
+            list-style: none; /* 去除无序列表的每条记录的标识 */
+        }
+
+        ul {
+            width: 1000px;
+            height: 30px;
+            background-color: #550;
+            overflow: hidden;
+            margin: 50px auto; /* 元素水平居中 */
+        }
+
+        li {
+            float: left;
+            width: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 0; /* 增加内边距，将li元素的高度撑起来，li元素已经设置漂浮，其高度只能通过子元素来撑起来 */
+            text-align: center;
+            display: block; /* 设置成块元素之后,可以设置宽高,将漂浮的块元素li撑起来*/
+            width: 100%;
+        }
+
+        .nav li a:hover {
+            background-color: deepskyblue; /*设置整个元素的背景 */
+            color: darkred; /*设置的是标签内容(这里是文字)的颜色 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="nav">
+            <li><a href="/Web/Teleplate.aspx">Home</a></li>
+            <li><a href="/Web/showdata.aspx">分页显示数据</a></li>
+            <li><a href="/Web/Vue.aspx">Vue测试</a></li>
+            <li><a href="TestJson.aspx">Josn测试</a></li>
+            <hr />
+            <li><a href="Operator/AddForm.aspx">Mac增加</a></li>
+            <li><a href="Operator/DeleteForm.aspx">Mac删除</a></li>
+            <li><a href="Operator/UpdateForm.aspx">Mac更改</a></li>
+            <li><a href="Operator/QuerryForm.aspx">Mac查询</a></li>
+            <li><a href="Operator/LogQuerry.aspx">操作日志查询</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,396 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF2897F9-E967-4F67-8687-6A8616A00631}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\Add.css" />
+    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\Lead.css" />
+    <Content Include="CSS\Mai.css" />
+    <Content Include="JS\bootstrap.js" />
+    <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\Http.js" />
+    <Content Include="JS\jquery-3.3.1.js" />
+    <Content Include="JS\jquery-3.3.1.min.js" />
+    <Content Include="JS\vue.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Service\WebService1.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web\Engineer.aspx" />
+    <Content Include="Web\Error.aspx" />
+    <Content Include="Web\Operator\AddForm.aspx" />
+    <Content Include="Web\Operator\DeleteForm.aspx" />
+    <Content Include="Web\Operator\GetCusMac.aspx" />
+    <Content Include="Web\Operator\Lead.html" />
+    <Content Include="Web\Operator\LogQuerry.aspx" />
+    <Content Include="Web\Operator\ManageUser.aspx" />
+    <Content Include="Web\Operator\QuerryForm.aspx" />
+    <Content Include="Web\Operator\ShowInfo.aspx" />
+    <Content Include="Web\Operator\UpdateForm.aspx" />
+    <Content Include="Web\Register.aspx" />
+    <Content Include="Web\RegisterError.aspx" />
+    <Content Include="Web\showdata.aspx" />
+    <Content Include="Web\Teleplate.aspx" />
+    <Content Include="Web\TestJson.aspx" />
+    <Content Include="Web\Test\GetCusMac.aspx" />
+    <Content Include="Web\Test\test.aspx" />
+    <Content Include="Web\Test\TestBoostrap.aspx" />
+    <Content Include="Web\UnUser2.aspx" />
+    <Content Include="Web\Unuser\Log.aspx" />
+    <Content Include="Web\Unuser\Querry.aspx" />
+    <Content Include="Web\Vue.aspx" />
+    <Content Include="Web\Manager.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DbHelper.cs" />
+    <Compile Include="Common\DealJsonData.cs" />
+    <Compile Include="Common\Help.cs" />
+    <Compile Include="Common\HttpUtils.cs" />
+    <Compile Include="Control\AddMacHelp.cs" />
+    <Compile Include="Control\MESXBS_USERTempCtrol.cs" />
+    <Compile Include="Control\MESXPT_CusMACOpLogCtrol.cs" />
+    <Compile Include="Control\MESXPT_CusMACResourceCtrol.cs" />
+    <Compile Include="Control\MESXPT_ModuleMiscInfoCtrol.cs" />
+    <Compile Include="Control\User.cs" />
+    <Compile Include="HttpUtil\HttpHelp.cs" />
+    <Compile Include="HttpUtil\HttpRequest.cs" />
+    <Compile Include="HttpUtil\HttpResponse.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="model\Info.cs" />
+    <Compile Include="model\MESXBS_USERTemp.cs" />
+    <Compile Include="model\MESXPT_CusMACOpLog.cs" />
+    <Compile Include="model\MESXPT_CusMACResource.cs" />
+    <Compile Include="model\MESXPT_ModuleMiscInfo.cs" />
+    <Compile Include="model\User_info.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web\Engineer.aspx.cs">
+      <DependentUpon>Engineer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Engineer.aspx.designer.cs">
+      <DependentUpon>Engineer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\AddForm.aspx.cs">
+      <DependentUpon>AddForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\AddForm.aspx.designer.cs">
+      <DependentUpon>AddForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\DeleteForm.aspx.cs">
+      <DependentUpon>DeleteForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\DeleteForm.aspx.designer.cs">
+      <DependentUpon>DeleteForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\GetCusMac.aspx.cs">
+      <DependentUpon>GetCusMac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\GetCusMac.aspx.designer.cs">
+      <DependentUpon>GetCusMac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\LogQuerry.aspx.cs">
+      <DependentUpon>LogQuerry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\LogQuerry.aspx.designer.cs">
+      <DependentUpon>LogQuerry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\ManageUser.aspx.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\ManageUser.aspx.designer.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\QuerryForm.aspx.cs">
+      <DependentUpon>QuerryForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\QuerryForm.aspx.designer.cs">
+      <DependentUpon>QuerryForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\ShowInfo.aspx.cs">
+      <DependentUpon>ShowInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\ShowInfo.aspx.designer.cs">
+      <DependentUpon>ShowInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Operator\UpdateForm.aspx.cs">
+      <DependentUpon>UpdateForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Operator\UpdateForm.aspx.designer.cs">
+      <DependentUpon>UpdateForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\RegisterError.aspx.cs">
+      <DependentUpon>RegisterError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\RegisterError.aspx.designer.cs">
+      <DependentUpon>RegisterError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\showdata.aspx.cs">
+      <DependentUpon>showdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\showdata.aspx.designer.cs">
+      <DependentUpon>showdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Teleplate.aspx.cs">
+      <DependentUpon>Teleplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Teleplate.aspx.designer.cs">
+      <DependentUpon>Teleplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\TestJson.aspx.cs">
+      <DependentUpon>TestJson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\TestJson.aspx.designer.cs">
+      <DependentUpon>TestJson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Test\GetCusMac.aspx.cs">
+      <DependentUpon>GetCusMac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Test\GetCusMac.aspx.designer.cs">
+      <DependentUpon>GetCusMac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Test\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Test\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Test\TestBoostrap.aspx.cs">
+      <DependentUpon>TestBoostrap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Test\TestBoostrap.aspx.designer.cs">
+      <DependentUpon>TestBoostrap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UnUser2.aspx.cs">
+      <DependentUpon>UnUser2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UnUser2.aspx.designer.cs">
+      <DependentUpon>UnUser2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Unuser\Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Unuser\Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Unuser\Querry.aspx.cs">
+      <DependentUpon>Querry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Unuser\Querry.aspx.designer.cs">
+      <DependentUpon>Querry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Vue.aspx.cs">
+      <DependentUpon>Vue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Vue.aspx.designer.cs">
+      <DependentUpon>Vue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Manager.aspx.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Manager.aspx.designer.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile10.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile11.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile12.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile13.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile14.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile15.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile16.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile17.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile18.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile19.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile20.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile21.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile22.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile23.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile24.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile25.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile26.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile27.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile28.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile29.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile30.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile4.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile5.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile6.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile7.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile8.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile9.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\Add\" />
+    <Folder Include="Control\Del\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Service\WebService1.asmx.resx">
+      <DependentUpon>WebService1.asmx.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52918</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52918/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
