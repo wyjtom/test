@@ -46,7 +46,7 @@ namespace Login.Service
         {
 
             //bool IsMacAddrFag = false;
-            //string s = @"^([0-9a-fA-F]{2})(([/\s-][0-9a-fA-F]{2}){5})$";
+            //string s = @"^([0-9a-fA-F]{2})(([/\s-][0-9a-fA-F]{2}){5})$";//75675675678568568
             //Regex r = new Regex(s);
             //MatchCollection oCollection = r.Matches(str_MacAddr.Trim());
             //if (oCollection.Count > 0)
